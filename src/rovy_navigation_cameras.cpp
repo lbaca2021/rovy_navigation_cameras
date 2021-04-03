@@ -6,7 +6,6 @@ int rovy_start_cameras(ros::NodeHandle& nodeHandle, RtabmapCallback callback) {
     try {
         ThreadSafeDeque odomBuffer;
 
-        T265Camera t265(nodeHandle, odomBuffer);
         D435Camera d435(nodeHandle, odomBuffer, callback);
 
         return 0;
